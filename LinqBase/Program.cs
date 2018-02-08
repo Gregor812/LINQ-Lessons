@@ -51,7 +51,7 @@ namespace LinqBase
                 Console.WriteLine(point.X + " " + point.Y);
 
             var words = new[] { "ab", "", "c", "de" };
-            var letters = words.SelectMany(w => w).ToList();  //IEnumerable<char> letters = words.SelectMany(w => w.ToCharArray()); -- the same
+            var letters = words.SelectMany(w => w).ToList(); //IEnumerable<char> letters = words.SelectMany(w => w.ToCharArray()); -- the same
 
             Classroom[] classes =
             {
@@ -62,6 +62,24 @@ namespace LinqBase
             var allStudents = Classroom.GetAllStudents(classes);
             Array.Sort(allStudents);
             Console.WriteLine(string.Join(" ", allStudents));
+
+            var p = new Point(0, 0);
+            var neighbours = Point.GetNeighbours(p);
+
+            var gridDots = firstFive.SelectMany(left => firstFive.Select(right => new[] { left, right })).ToArray();
+
+            var vocabulary = GetSortedWords(
+                "Hello, hello, hello, how low",
+                "",
+                "With the lights out, it's less dangerous",
+                "Here we are now; entertain us",
+                "I feel stupid and contagious",
+                "Here we are now; entertain us",
+                "A mulatto, an albino, a mosquito, my libido...",
+                "Yeah, hey"
+            );
+            foreach (var word in vocabulary)
+                Console.WriteLine(word);
         }
 
         public static int[] ParseNumbers(IEnumerable<string> lines)
@@ -70,6 +88,16 @@ namespace LinqBase
                   .Where(l => int.TryParse(l, out _))
                   .Select(i => int.Parse(i))
                   .ToArray();
+        }
+
+        public static string[] GetSortedWords(params string[] textLines)
+        {
+            return textLines.SelectMany(line => line.Split(new[] { " ", ",", ";", "...", "'" },
+                                                           StringSplitOptions.RemoveEmptyEntries)
+                                                    .Select(s => s.ToLowerInvariant()))
+                            .Distinct()
+                            .OrderBy(s => s)
+                            .ToArray();
         }
     }
 
@@ -81,6 +109,18 @@ namespace LinqBase
         {
             X = x;
             Y = y;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Point p)
+                return X == p.X && Y == p.Y;
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return X ^ Y;
         }
 
         public static List<Point> ParsePoints(IEnumerable<string> lines)
@@ -95,6 +135,12 @@ namespace LinqBase
                       return new Point(position[0], position[1]);
                   })
                   .ToList();
+        }
+
+        public static IEnumerable<Point> GetNeighbours(Point p)
+        {
+            int[] d = { -1, 0, 1 }; // используйте подсказку, если не понимаете зачем тут этот массив :)
+            return d.SelectMany(dx => d.Select(dy => new Point(p.X + dx, p.Y + dy))).Where(point => !point.Equals(p));
         }
     }
 
