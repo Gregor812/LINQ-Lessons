@@ -128,12 +128,12 @@ namespace LinqBase
                 new Document {Id = 3, Text = "Words — power"},
                 new Document {Id = 4, Text = ""}
             };
-            var index = Document.BuildInvertedIndex(documents);
-            Document.SearchQuery("world", index);
-            Document.SearchQuery("words", index);
-            Document.SearchQuery("power", index);
-            Document.SearchQuery("cthulhu", index);
-            Document.SearchQuery("", index);
+            var index = InvertedIndex.BuildInvertedIndex(documents);
+            InvertedIndex.SearchQuery("world", index);
+            InvertedIndex.SearchQuery("words", index);
+            InvertedIndex.SearchQuery("power", index);
+            InvertedIndex.SearchQuery("cthulhu", index);
+            InvertedIndex.SearchQuery("", index);
         }
 
         private static void SelectExercises()
