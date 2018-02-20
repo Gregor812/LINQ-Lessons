@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqBase", "LinqBase\LinqBase.csproj", "{8E109A08-6083-4EB5-A960-B9C9537DC492}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaccardIndex", "JaccardIndex\JaccardIndex.csproj", "{E86AC110-C8AD-4F96-A883-F3FB39247246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqMetanit", "LinqMetanit\LinqMetanit.csproj", "{3161ACF2-6F85-4463-A036-236BB8FD1D39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E86AC110-C8AD-4F96-A883-F3FB39247246}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E86AC110-C8AD-4F96-A883-F3FB39247246}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E86AC110-C8AD-4F96-A883-F3FB39247246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3161ACF2-6F85-4463-A036-236BB8FD1D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3161ACF2-6F85-4463-A036-236BB8FD1D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3161ACF2-6F85-4463-A036-236BB8FD1D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3161ACF2-6F85-4463-A036-236BB8FD1D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
