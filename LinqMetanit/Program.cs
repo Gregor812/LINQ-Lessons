@@ -92,6 +92,23 @@ namespace LinqMetanit
             Console.WriteLine();
             Grouping.Example2();
             Console.WriteLine();
+            Grouping.Example3();
+            Console.WriteLine();
+            Grouping.Example4();
+            Console.WriteLine();
+            Grouping.Example5();
+            Console.WriteLine();
+            Grouping.Example6();
+            Console.WriteLine();
+
+            JoinGroupJoinAndZip.Example1();
+            Console.WriteLine();
+            JoinGroupJoinAndZip.Example2();
+            Console.WriteLine();
+            JoinGroupJoinAndZip.Example3();
+            Console.WriteLine();
+            JoinGroupJoinAndZip.Example4();
+            Console.WriteLine();
         }
     }
 }

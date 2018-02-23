@@ -45,6 +45,7 @@
     <Compile Include="AggregateOperations.cs" />
     <Compile Include="FilteringAndProjection.cs" />
     <Compile Include="Grouping.cs" />
+    <Compile Include="JoinGroupJoinAndZip.cs" />
     <Compile Include="LinqBasics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
