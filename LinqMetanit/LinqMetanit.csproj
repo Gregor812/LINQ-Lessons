@@ -47,10 +47,13 @@
     <Compile Include="Grouping.cs" />
     <Compile Include="JoinGroupJoinAndZip.cs" />
     <Compile Include="LinqBasics.cs" />
+    <Compile Include="Phone.cs" />
+    <Compile Include="PlayerAndTeam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkipAndTake.cs" />
     <Compile Include="Sorting.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="WorkingWithSets.cs" />
   </ItemGroup>
   <ItemGroup>
