@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateOperations.cs" />
+    <Compile Include="AllAny.cs" />
     <Compile Include="FilteringAndProjection.cs" />
     <Compile Include="Grouping.cs" />
     <Compile Include="JoinGroupJoinAndZip.cs" />

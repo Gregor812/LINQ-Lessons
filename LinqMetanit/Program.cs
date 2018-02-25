@@ -109,6 +109,11 @@ namespace LinqMetanit
             Console.WriteLine();
             JoinGroupJoinAndZip.Example4();
             Console.WriteLine();
+
+            AllAny.Example1();
+            Console.WriteLine();
+            AllAny.Example2();
+            Console.WriteLine();
         }
     }
 }
